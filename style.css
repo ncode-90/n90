@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-align: center;
+  transition: background 0.5s ease;
+}
+
+/* الصفحات */
+.page {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 30px 20px;
+  margin: 30px auto;
+  max-width: 600px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  display: none;
+}
+
+.page.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  display: block;
+}
+
+/* العناوين */
+h1 {
+  margin-top: 10px;
+  font-size: 2.8rem;
+  color: #333;
+}
+
+/* الأزرار */
+button, .button-link {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  margin: 10px;
+  font-size: 1.3rem;
+  border-radius: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+button:hover, .button-link:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  transform: scale(1.07);
+}
+
+/* العداد */
+#count {
+  font-size: 6rem;
+  margin: 30px 0;
+  color: #111;
+}
+
+/* قائمة اختيار الذكر */
+.select-section {
+  margin: 20px 0;
+}
+
+.select-section select {
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.select-section select:focus {
+  border-color: #0071e3;
+}
+
+/* شريط التقدم */
+.goal-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 25px;
+  background: #e0e0e0;
+  margin: 20px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  width: 0%;
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
+
+/* الجدول */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+th, td {
+  padding: 15px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #f4f4f4;
+  color: #555;
+}
+
+td {
+  background: #fff;
+  color: #666;
+}
+
+th:first-child, td:first-child {
+  border-right: 1px solid #eee;
+}
